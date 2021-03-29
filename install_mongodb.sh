@@ -18,4 +18,6 @@ echo " -===== 8 ======- " && \
 sudo systemctl enable mongod && \
 echo " -===== 9 ======- " && \
 sudo systemctl status mongod && \
+echo " -===== 10 ======- " && \
+sudo netstat -nlput && \
 echo " -===== 0 ======- "
