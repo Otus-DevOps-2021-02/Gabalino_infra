@@ -22,3 +22,6 @@ Host someinternalhost
 
 bastion_IP = 84.252.129.79
 someinternalhost_IP = 10.130.0.14
+
+testapp_IP = 178.154.202.8
+testapp_port = 9292
