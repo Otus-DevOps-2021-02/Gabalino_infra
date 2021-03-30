@@ -1,0 +1,7 @@
+{
+    "folder_id": "1q2w3e4r5t6y7u8i9o",
+    "source_image_family": "ubuntu-2004-lts",
+    "service_account_key_file": "key.json",
+    "platform_id": "small-v2",
+    "ssh_username": "user"
+}
