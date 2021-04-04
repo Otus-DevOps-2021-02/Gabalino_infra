@@ -44,3 +44,17 @@ yc compute instance create \
 testapp_IP = 178.154.202.8
 testapp_port = 9292
 ```
+___
+___Packer__
+```
+packer validate -var-file=variables.json  ubuntu16.json
+packer build -var-file=variables.json  ubuntu16.json
+```
+___
+___Terraform__
+```
+terraform fmt
+terraform validate
+terraform apply
+terraform destroy
+```
