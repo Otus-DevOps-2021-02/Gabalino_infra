@@ -57,4 +57,5 @@ terraform fmt
 terraform validate
 terraform apply
 terraform destroy
+terraform get - загрузить модули
 ```
