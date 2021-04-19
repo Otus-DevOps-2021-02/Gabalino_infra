@@ -2,7 +2,6 @@
 - name: Create user {{ uuser }}
   hosts: all
   become: true
-  remote_user: ubuntu
   vars:
     uuser: 'appuser'
     ukey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDIFOzQ26iKC+xG2JjD65egN/KG3t2lTFNH5wlNyDLDrd4bDxeEqg2qrkuzZR5TCiGT4eiIulIEeBHTES+/+ASDz8SAUB8/eOqz5LYZ/icKxgsFWWKQgnatUFoIFicHPxMjlUaeEG5Ide9GswARaVIldhftFGeTLEmQ3k0tXgwffUheWOCtEmMWW6I4qCRA4DT+NKFazUA62m5PUg3GKU2q6osClm4ggz/paqX3OxGx0mmgyICmlkSX8dkGD2jv/PCUYvpsLETGW+YXfDng4tBOMX0PSE8LKmYznkzXmksnarsYKU5whLZk3xIv8HGFrvvcOVsltfR2kA9900pWhdD5TlGFYCQwsTnlzB70rlMLLjOU9R9puu5M3TGFYY6luN4kDSfAteA+cOyP/qxUhEmVnxb1Xi4xhd0Rpb6V/+yuy1AaKCu1ECuYQQgpQzXoRYnkijkVbJR4cw1um3Qt0xtvmjdDvTOHoeMVRLn/UmPcz5ijdw3wsD32jmDJMWEKQfs= appuser"
@@ -12,11 +11,11 @@
     user:
       name: "{{ uuser }}"
 
-  - name: Deploy SSH Key
-    ansible.posix.authorized_key:
-      user: "{{ uuser }}"
-      state: present
-      key: "{{ ukey }}"
+#  - name: Deploy SSH Key
+#    ansible.posix.authorized_key:
+#      user: "{{ uuser }}"
+#      state: present
+#      key: "{{ ukey }}"
 
   - name: Add sudo Group
     user:
