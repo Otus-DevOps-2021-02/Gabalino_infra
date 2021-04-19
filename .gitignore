@@ -1,6 +1,13 @@
+# Packer
 packer/variables.json
+
+# Terraform
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
 .terraform/
+backend.tf
+
+# Ansible
+*.retry
