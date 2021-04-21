@@ -11,3 +11,7 @@ backend.tf
 
 # Ansible
 *.retry
+vault.key
+
+# Ansible Galaxy
+jdauphant.nginx
