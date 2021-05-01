@@ -45,17 +45,40 @@ testapp_IP = 178.154.202.8
 testapp_port = 9292
 ```
 ___
-___Packer__
+__Packer__
 ```
 packer validate -var-file=variables.json  ubuntu16.json
 packer build -var-file=variables.json  ubuntu16.json
 ```
 ___
-___Terraform__
+__Terraform__
 ```
 terraform fmt
 terraform validate
 terraform apply
 terraform destroy
 terraform get - загрузить модули
+```
+
+__Vagrant__
+
+```
+vagrant up
+vagrant box list
+vagrant status
+vagrant ssh appserver
+cat .vagrant/provisioners/ansible/inventory/vagrant_ansible_inventory
+vagrant destroy -f
+```
+__Molecule__
+```
+https://docs.python-guide.org/dev/virtualenvs/
+pip3 install -r requirements.txt
+pip3 install git+https://github.com/ansible-community/molecule-vagrant.git
+molecule init scenario -r db -d vagrant
+molecule create
+molecule list
+molecule login -h instance
+molecule converge
+molecule verify
 ```
