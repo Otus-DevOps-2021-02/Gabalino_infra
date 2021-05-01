@@ -3,10 +3,6 @@
   hosts: all
   become: true
 
-  tasks:
-  # Установим все зависимости
-  - name: Install ruby and rubygems and required packages
-    apt:
-      name: ['ruby-full', 'ruby-bundler', 'build-essential', 'git']
-      state: present
-      update_cache: yes
+  roles:
+    - app
+    - jdauphant.nginx
