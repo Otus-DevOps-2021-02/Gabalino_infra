@@ -1,0 +1,11 @@
+---
+  - name: Create user named {{ deploy_user }}
+    user:
+      name: "{{ deploy_user }}"
+
+  # Установим все зависимости
+  - name: Install ruby, rubygems and required packages
+    apt:
+      name: ['ruby-full', 'ruby-bundler', 'build-essential', 'git']
+      state: present
+      update_cache: yes
